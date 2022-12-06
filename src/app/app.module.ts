@@ -17,20 +17,17 @@ import { ProductComponent } from './pages/product/product.component';
 import { CatalogueComponent } from './pages/catalogue/catalogue.component';
 import { PagesComponent } from './pages/pages.component';
 import { NopagesfoundComponent } from './pages/nopagesfound/nopagesfound.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NopagesfoundComponent,
-    
-   
-  ],
+  declarations: [AppComponent, NopagesfoundComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     PagesModule,
     SharedModule,
     AuthModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

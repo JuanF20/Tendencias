@@ -9,6 +9,8 @@ import { CatalogueComponent } from './pages/catalogue/catalogue.component';
 
 import { PagesComponent } from './pages/pages.component';
 import { NopagesfoundComponent } from './pages/nopagesfound/nopagesfound.component';
+import { PagesRoutingModule } from './pages/pages-routing.module';
+import { AuthRoutingModule } from './auth/auth-routing.module';
 
 const routes: Routes = [
   {
@@ -29,7 +31,11 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [],
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes),
+    PagesRoutingModule,
+    AuthRoutingModule,
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
